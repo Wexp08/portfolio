@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Портфолио — Муртазо</title>
+<meta name="description" content="Портфолио: фотографии, видео и дизайн.">
+<meta name="theme-color" content="#0f0b14">
+
+<!-- Красивые шрифты (нужен интернет): Unbounded, Playfair Display, Caveat, Manrope -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- фон: зерно, цветные пятна, свечение за курсором -->
+<div class="grain"></div>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ ВЕРХНЯЯ ПАНЕЛЬ ============ -->
+<header class="topbar">
+  <a href="#top" class="logo">muhim&nbsp;<span>✦</span></a>
+  <nav class="topnav">
+    <a href="#works">работы</a>
+    <a href="#contact">контакты</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ ОБО МНЕ ============ -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow reveal">✦ привет, я</p>
+    <h1 class="reveal">
+      <span class="serif">Муртазо</span>
+    </h1>
+    <p class="hand reveal">фотограф · видеограф · немного дизайнер</p>
+
+    <p class="about reveal">
+      фотографирую, снимаю, живу в поиске красивых кадров. люблю киношную атмосферу, необычный свет, живые эмоции и детали, которые делают каждый момент особенным. постоянно учусь видеть больше и снимать лучше. в каждом кадре стараюсь оставить частичку своего взгляда на мир
+    </p>
+
+    <ul class="facts reveal">
+      <li>📍 Казань</li>
+      <li>📷 Снимаю с 2023 года</li>
+      <li>🎬 be creative itz muhim</li>
+    </ul>
+
+    <div class="hero-btns reveal">
+      <a href="#works" class="btn btn-main">Смотреть работы ↓</a>
+      <a href="#contact" class="btn btn-ghost">Написать мне</a>
+    </div>
+  </div>
+
+  <div class="hero-photo reveal">
+    <span class="note">это я! ↓</span>
+    <div class="portrait" id="portrait">
+      <div class="portrait-back"></div>
+      <div class="portrait-frame">
+        <!-- ТВОЯ ФОТКА: положи файл me.jpg рядом с index.html -->
+        <img src="me.jpg" alt="Моё фото" data-ph="800x1000" data-label="здесь твоё фото">
+      </div>
+      <svg class="sticker" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+        <text><textPath href="#circ" textLength="440">фото ✦ видео ✦ дизайн ✦ фото ✦ видео ✦ дизайн ✦</textPath></text>
+        <circle cx="100" cy="100" r="9" class="dot"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- бегущая строка -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>ФОТО ✦ ВИДЕО ✦ ДИЗАЙН ✦ КАДРЫ ✦ ЭМОЦИИ ✦ СВЕТ ✦ ДВИЖЕНИЕ ✦ </span>
+    <span>ФОТО ✦ ВИДЕО ✦ ДИЗАЙН ✦ КАДРЫ ✦ ЭМОЦИИ ✦ СВЕТ ✦ ДВИЖЕНИЕ ✦ </span>
+  </div>
+</div>
+
+<!-- ============ РАБОТЫ ============ -->
+<section class="works" id="works">
+  <div class="section-head reveal">
+    <p class="eyebrow">✦ портфолио</p>
+    <h2>Мои <span class="serif">работы</span></h2>
+  </div>
+
+  <div class="tabs reveal" role="tablist">
+    <button class="tab active" role="tab" data-tab="photo"><i>01</i> Фото</button>
+    <button class="tab" role="tab" data-tab="video"><i>02</i> Видео</button>
+    <button class="tab" role="tab" data-tab="design"><i>03</i> Дизайн</button>
+  </div>
+
+  <!-- ---------- ВКЛАДКА: ФОТО ---------- -->
+  <div class="panel active" id="panel-photo" role="tabpanel">
+    <div class="gallery">
+
+      <!--
+        ═══ КАК ДОБАВИТЬ СВОЁ ФОТО ═══
+        1. Положи файл в папку photos/ (например photos/svadba.jpg)
+        2. Скопируй один из блоков <figure>…</figure> ниже и вставь в этот список
+        3. Поменяй src="photos/…", alt и название в <figcaption>
+        Атрибуты data-ph и data-label нужны только для заглушки — их можно удалить.
+      -->
+
+      <figure class="photo">
+        <img src="photos/1.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/2.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/3.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/4.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/5.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/6.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/7.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/8.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/9.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/10.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/11.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/12.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/13.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/14.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/15.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/16.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/17.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/18.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/19.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/20.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/21.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/22.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/23.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/24.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/25.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/26.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/27.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/28.png" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/29.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/30.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/31.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/32.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/33.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/34.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/35.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/36.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/37.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/38.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/39.jpg" loading="lazy">
+      </figure>
+      
+      <figure class="photo">
+        <img src="photos/40.PNG" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/41.PNG" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/42.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/43.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/44.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/45.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/46.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/47.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/48.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/49.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/50.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/51.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/52.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/53.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/54.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/55.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/56.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/57.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/58.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/59.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/60.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/61.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/62.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/63.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/64.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/65.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/66.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/67.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/68.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/69.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/70.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/71.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/72.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/73.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/74.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/75.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/76.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/77.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/78.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/79.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/80.jpg" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/81.JPG" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/82.JPG" loading="lazy">
+      </figure>
+
+      <figure class="photo">
+        <img src="photos/83.JPG" loading="lazy">
+      </figure>
+
+    </div>
+  </div>
+
+  <!-- ---------- ВКЛАДКА: ВИДЕО ---------- -->
+  <div class="panel" id="panel-video" role="tabpanel">
+    <div class="video-grid">
+
+      <!--
+        ═══ КАК ДОБАВИТЬ СВОЁ ВИДЕО ═══
+        1. Положи файл в папку videos/ (лучше формат .mp4)
+        2. Скопируй один блок <article class="video-card">…</article>
+        3. Поменяй src="videos/…" и название
+        4. Хочешь свою обложку — добавь poster="videos/обложка.jpg" в тег <video>
+        Для вертикального видео (с телефона) добавь класс vertical:
+        <article class="video-card vertical">
+      -->
+
+      <article class="video-card">
+        <video src="videos/1.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/2.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/3.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/9.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+      
+      <article class="video-card">
+        <video src="videos/10.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/11.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/12.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/13.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card">
+        <video src="videos/14.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card vertical">
+        <video src="videos/4.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card vertical">
+        <video src="videos/5.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card vertical">
+        <video src="videos/6.mp4" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card vertical">
+        <video src="videos/7.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+      <article class="video-card vertical">
+        <video src="videos/8.mp4#t=0.1" preload="metadata" playsinline></video>
+        <div class="play"><span></span></div>
+      </article>
+
+
+    </div>
+  </div>
+
+  <!-- ---------- ВКЛАДКА: ДИЗАЙН ---------- -->
+  <div class="panel" id="panel-design" role="tabpanel">
+    <div class="soon">
+      <span class="shape s1"></span>
+      <span class="shape s2"></span>
+      <span class="shape s3"></span>
+      <p class="hand">тут будет магия</p>
+      <h3><span class="serif">скоро</span><em>.</em><em>.</em><em>.</em></h3>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КОНТАКТЫ ============ -->
+<section class="contact" id="contact">
+  <p class="eyebrow reveal">✦ контакты</p>
+  <h2 class="reveal">Давай создадим<br><span class="serif">что-то красивое</span></h2>
+  <div class="links reveal">
+    <!-- Замени ссылки на свои -->
+    <a href="https://www.instagram.com/itz_muhim?rpxt=amE3dG83czByamN5&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://t.me/dinovvv08" target="_blank" rel="noopener">Telegram</a>
+    <a href="mailto:muhidinovmurtazo08@gmail.com">Email</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year">2026</span> muhim</span>
+  <span class="hand">захотел сделал ыы</span>
+</footer>
+
+<!-- ============ ПРОСМОТР ФОТО НА ВЕСЬ ЭКРАН ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Назад">‹</button>
+  <figure>
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Вперёд">›</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
